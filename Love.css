@@ -1,0 +1,118 @@
+/* =========================
+   🌍 Body
+========================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* =========================
+   🌄 Background
+========================= */
+.background {
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(255,105,180,0.25), rgba(255,20,147,0.25)),
+    url("love.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: bgMove 20s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+@keyframes bgMove {
+  0% { background-position: center top; }
+  100% { background-position: center bottom; }
+}
+
+/* =========================
+   🌸 Flowers
+========================= */
+.flowers {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.flower {
+  position: absolute;
+  top: -50px;
+  font-size: 22px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   💖 Card
+========================= */
+.card {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 360px;
+  margin: 100px auto;
+  padding: 25px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.20);
+  backdrop-filter: blur(25px);
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.card h1 {
+  color: white;
+  font-size: 26px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px #ff4d6d;
+}
+
+/* =========================
+   🔘 Buttons
+========================= */
+button {
+  padding: 12px 25px;
+  margin: 8px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+#yesBtn {
+  background: linear-gradient(45deg, #ff1744, #ff616f);
+  color: white;
+}
+
+#yesBtn:hover {
+  transform: scale(1.15);
+}
+
+#noBtn {
+  background: #444;
+  color: white;
+  position: relative;
+}
+
+/* =========================
+   🖼 Image
+========================= */
+.love-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  margin: 15px auto 0;
+}
